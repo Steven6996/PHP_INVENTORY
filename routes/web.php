@@ -69,3 +69,5 @@ Route::post('/brand/save', [BrandController::class, 'save'])->name('brand.save')
 /*Ruta para borrar datos por el boton de borrar*/
 Route::get('/brand/delete{id}', [BrandController::class,'delete'])->name('brand.delete');
 
+
+

@@ -10,8 +10,12 @@ class Product extends Model
     use HasFactory;
 
 
-    ///Aqui se hace la relacion de product a brand
+    ///relacion de product a brand
     function brand(){
         return $this->belongsTo(Brand::class);
+    }
+    ///relacion de product a categorias
+    function Categories(){
+        return $this->belongsTo(Categories::class);
     }
 }

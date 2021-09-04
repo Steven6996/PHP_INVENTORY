@@ -20,10 +20,12 @@ class CreateProductTable extends Migration
             $table->double('price',10,2);
             $table->integer('quantity');
             $table->foreignId('brand_id');
+            $table->foreignId('category_id');
             $table->timestamps();
 
             //Relacion con la tb brands
             $table -> foreign('brand_id')->references('id') -> on('brands');
+            $table -> foreign('category_id')->references('id') -> on('category');
         });
     }
 
